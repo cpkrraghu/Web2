@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/emp.js"></script>
+<title>Employee Home</title>
+</head>
+<body>
+
+	<div class="jumbotron text-center">
+		<h1>Employee Application</h1>
+		<p>You can search for an Employee or Department</p>
+	</div>
+	<div class="container">
+		<div class="row" style="padding-top: 10px">
+			<form id="empForm" method="post">
+				<div class="col-sm-6 ">
+					<div class="panel panel-primary padding-top-20">
+						<div class="panel-heading">Employee</div>
+						<div class="panel-body">
+							<div class="row" style="padding-top:10px">
+								<input type="number" id="empId" name="empId" class="form-control"
+									placeholder="Enter a employee ID" />
+							</div>
+							<div class="row" style="padding-top:10px">
+								<button class="btn btn-success" id="empBtn" onclick="sub(this.id)">Get Employee</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-primary padding-top-20">
+						<div class="panel-heading">Department</div>
+						<div class="panel-body">
+							<div class="row" style="padding-top:10px">
+								<input type="number" id="deptId" name="deptId" class="form-control"
+									placeholder="Enter a Department ID" />
+							</div>
+							<div class="row" style="padding-top:10px">
+								<button class="btn btn-success" id="deptBtn" onclick="sub(this.id)">Get Department Employees</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

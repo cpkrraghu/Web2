@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>Archetype Created Web Application</display-name>
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<servlet-class>com.imcs.raghu.ui.Servlets.EmployeeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DepartmentServlet</servlet-name>
+		<servlet-class>com.imcs.raghu.ui.Servlets.DepartmentServlet</servlet-class>
+	</servlet>
+	<filter>
+
+		<filter-name>PageFilter</filter-name>
+
+		<filter-class>com.imcs.raghu.filters.PageFilter</filter-class>
+
+	</filter>
+
+
+	
+	<filter-mapping>
+
+		<filter-name>PageFilter</filter-name>
+
+		<url-pattern>/*</url-pattern>
+
+	</filter-mapping>
+	<servlet-mapping>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<url-pattern>/employee</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DepartmentServlet</servlet-name>
+		<url-pattern>/department</url-pattern>
+	</servlet-mapping>
+
+</web-app>
